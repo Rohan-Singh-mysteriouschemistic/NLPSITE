@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NLP Site</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    <style>
+      body {
+        background: linear-gradient(to bottom, #cce2ff, #e2d4ff, #fff0e6);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .info-box {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">NLP App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Actions
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="/ner">NER</a></li>
+                <li><a class="dropdown-item" href="/sentiment">Sentiment Analysis</a></li>
+                <li><a class="dropdown-item" href="/grammar">Grammar & Spelling Check</a></li>
+                <li><a class="dropdown-item" href="/codegen">Pseudo-Code Generator</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main-content">
+      <div class="info-box">
+        <h1 class="mb-3 text-primary">Welcome to NLP App</h1>
+        <h4 class="mb-1">User: <strong>{{ username }}</strong></h4>
+        <h5 class="text-muted">Email: <em>{{ email }}</em></h5>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
