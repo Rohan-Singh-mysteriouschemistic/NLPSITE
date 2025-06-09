@@ -1,4 +1,3 @@
-"""
 Flask-based Web Application for NLP Utilities
 
 This application provides a simple interface for users to:
@@ -17,5 +16,3 @@ To run the app:
 - Make sure `Database.py`, `Api.py`, and the HTML templates (`Login.html`, etc.) are present in appropriate folders.
 - Run this file directly with Python to start the server on localhost.
 - Make sure the NLP Cloud Token has not been exhausted.
-
-"""
